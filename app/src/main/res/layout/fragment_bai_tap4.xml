@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhập dãy số (cách nhau bằng dấu cách hoặc dấu phẩy):"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/edtNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="ví dụ: 1 2 3 4 5 hoặc 1,2,3,4,5"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnSplit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phân chia chẵn/lẻ"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvEven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chẵn: "
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvOdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lẻ: "
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>

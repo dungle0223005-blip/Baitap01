@@ -5,9 +5,7 @@ plugins {
 
 android {
     namespace = "tdung.baitap01"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "tdung.baitap01"
@@ -28,12 +26,18 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -43,10 +47,16 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // ViewPager2 + CircleImageView
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+
+    // Fragment KTX + Lifecycle (khuyến nghị)
+    implementation("androidx.fragment:fragment-ktx:1.6.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
 }
